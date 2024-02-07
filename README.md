@@ -1,1 +1,1 @@
-![alt text](https://github.com/ov4u/TodoApp/blob/main/todo.PNG?raw=true)
+![alt text](https://github.com/DrStone10/TodoApp/blob/main/src/assets/todo.PNG?raw=true)
