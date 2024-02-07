@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+:root{
+  --color-main: #ff5845;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070f27;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: linear-gradient(135deg, #00feba11, #5b548acd);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px #00000041;
+}
+.todo-app h2{
+  color: #ffffffec;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img{
+  width: 30px;
+  margin-left: 10px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ebfffc26;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  transition: all 0.5s ease;
+}
+.row:hover{
+  background: #faf8f80d;
+}
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  height: 60px;
+  padding: 10px;
+  font-size: 16px;
+}
+button{
+  border: none;
+  outline: none;
+  padding: 20px 30px;
+  background: #c56647da;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+button:hover{
+  background: #ff5845;
+}
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  color: #fff;
+}
+ul li:hover{
+  color: var(--color-main);
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(src/assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked{
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(src/assets/checked.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.3s;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef03c;
+}
+.shape {
+  position: absolute;
+  width: 2000px; /* Increase size */
+  height: 2000px; /* Increase size */
+  background-color: #65baff0c;
+  border-radius: 50%;
+  animation: moveShape 40s infinite alternate ease-in-out;
+  z-index: -1;
+  box-shadow: 4px 4px 100px 100px hsla(215, 72%, 64%, 0.052);
+}
+
+@keyframes moveShape {
+  0% {
+    transform: translateY(200px) rotate(0deg);
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateY(-600px) rotate(0deg);
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateY(800px) rotate(0deg);
+    transform: translateX(200px);
+  }
+}
